@@ -1,0 +1,27 @@
+/**
+  Color.hpp
+  Contains the Color class with no implementations.
+*/
+class Color { 
+private:
+  u_char8 red;
+  u_char8 green;
+  u_char8 blue;
+  u_float32 alpha;
+public:
+  Color() {
+    setRGBa(0, 0, 0, 1.f);
+  }
+  Color(u_char8 red, u_char8 green, u_char8 blue) {
+    setRGBa(red, green, blue, 1.f);
+  }
+  Color(u_char8 red, u_char8 green, u_char8 blue, u_float32 alpha) {
+    setRGBa(red, green, blue, alpha);
+  }
+  void setRGBa(u_char8 red, u_char8 green, u_char8 blue, u_float32 alpha) {
+    this->red   = red;
+    this->green = green;
+    this->blue  = blue;
+    this->alpha = alpha;
+  }
+}
